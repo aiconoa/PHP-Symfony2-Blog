@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    {% for article in articles %}
+        {{ include('article/articleDetail.html.twig') }}
+    {% endfor %}
+    <nav>
+      <ul class="pager">
+        {% if page > 1 %}
+        <li><a href="{{ path('app_article_list', {'page' : page - 1}) }}">Previous</a></li>
+        {% endif %}
+        {% if page < pageMax %}
+        <li><a href="{{ path('app_article_list', {'page' : page + 1}) }}">Next</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+{% endblock %}

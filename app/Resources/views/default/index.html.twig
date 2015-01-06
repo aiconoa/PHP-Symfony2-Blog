@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    <h1 class="blog-title">Aiconoa / Blog</h1>
+    <p class="lead blog-description">A Symfony 2 framework training project.</p>
+{% endblock %}
+{% block main %}
+    <h1>Latest articles</h1>
+    {{ render(controller('AppBundle:Article:latestNArticles', { 'n': 5 })) }}
+    <a href="{{ path('app_article_list') }}">Tous les articles</a>
+{% endblock %}

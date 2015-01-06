@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.title) }}
+{{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    
+    <script src="{{ asset("ckeditor/ckeditor.js") }}"></script>
+{% endblock %}

@@ -1,0 +1,5 @@
+<div class="blog-post">
+  <h2 class="blog-post-title"><a href="{{ path('app_article_show', {'id' : article.id}) }}">{{ article.title }}</a></h2>
+  <p class="blog-post-meta">Crée le: {{ article.createdOn|date("d/m/Y") }} by <a href="#">{{ article.author.username }}</a></p>
+  {{ article.content|raw }}
+</div><!-- /.blog-post -->

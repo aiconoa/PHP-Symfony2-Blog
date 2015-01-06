@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{# http://symfony.com/doc/current/cookbook/controller/error_pages.html #}
+
+{% block main %}    
+    <h1>Oops! An Error Occurred</h1>
+    <h2>The server returned a "{{ status_code }} {{ status_text }}".</h2>
+{% endblock %}

@@ -1,0 +1,21 @@
+login:
+    pattern:   /login
+    defaults:  { _controller: AppBundle:Security:login }
+login_check:
+    pattern:   /login_check
+logout:
+    pattern:   /logout
+
+#aiconoa_user:
+#    resource: "@AiconoaUserBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+
+articles:
+    resource: "@AppBundle/Controller/ArticleController.php"
+    prefix:   /articles
+    type:     annotation
